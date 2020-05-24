@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper plane</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      /* flex-direction: column; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <p>预设分组，拖动到输入框，批量保存</p>
+  <label for="link-entry">Entry
+    <input id="link-entry" type="text">
+    <button onclick="save()">保存</button>
+  </label>
+
+  <section>
+    <ul class="link-group">
+      <li>yes</li>
+    </ul>
+  </section>
+
+  <script>
+    const linkGroup = document.getElementsByClassName('link-group')[0]
+    
+    const save = () => {
+      const li = document.createElement('li')
+      li.innerHTML = 'yes ok'
+      linkGroup.appendChild(li)
+    }
+
+
+  </script>
+</body>
+</html>
